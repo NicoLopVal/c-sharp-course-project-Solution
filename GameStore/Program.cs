@@ -4,6 +4,30 @@
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(@"╔╦╦╦═╦╗╔═╦═╦══╦═╗");
+            Console.WriteLine(@"║║║║╩╣╚╣═╣║║║║║╩╣");
+            Console.WriteLine(@"╚══╩═╩═╩═╩═╩╩╩╩═╝");
+            Console.WriteLine(@"          {}");
+            Console.WriteLine(@"         .--.");
+            Console.WriteLine(@"        /.--.\");
+            Console.WriteLine(@"        |====|");
+            Console.WriteLine(@"        |`::`|");
+            Console.WriteLine(@"    .-;`\..../`;_.-^-._");
+            Console.WriteLine(@"   /  |...::..|`   :   `|");
+            Console.WriteLine(@"  |   /'''::''|   .:.   |");
+            Console.WriteLine(@"  ;--'\   ::  |..:::::..|");
+            Console.WriteLine(@"  <__> >._::_.| ':::::' |");
+            Console.WriteLine(@"  |  |/   ^^  |   ':'   |");
+            Console.WriteLine(@"  \::/|       \    :    /");
+            Console.WriteLine(@"  |||\|        \   :   /");
+            Console.WriteLine(@"  ''' |___/\___|`-.:.-`");
+            Console.WriteLine(@"       \_ || _/    `");
+            Console.WriteLine(@"       <_ >< _>");
+            Console.WriteLine(@"       |  ||  |");
+            Console.WriteLine(@"       |  ||  |");
+            Console.WriteLine(@"      _\.:||:./_");
+            Console.WriteLine(@"     /____/\____\");
+            
             try
             {
                 Console.WriteLine("Welcome to Magic & Steel!\nType \"Start\" to begin...");
