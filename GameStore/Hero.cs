@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 
-namespace RPGGame
+namespace TheGame
 {
     public class Hero : LivingBeing
     {

@@ -1,4 +1,4 @@
-﻿namespace RPGGame
+﻿namespace TheGame
 {
     public abstract class LivingBeing
     {
