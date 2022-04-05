@@ -11,7 +11,7 @@ namespace TheGame.CombatCalculator
     {
         public static void Attack (LivingBeing attacker, LivingBeing defender, int attackModifier)
         {
-            var attackerDamageRoll = attacker.GetWeapon().GetWeaponDamageRoll();
+            var attackerDamageRoll = "";// = attacker.GetWeapon().GetWeaponDamageRoll();
             var attackRollModifier = attackModifier;
             var defenderArmorClass = defender.getArmorClass();
             int TotalDamage = 0;
