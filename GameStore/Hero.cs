@@ -38,22 +38,22 @@ namespace TheGame
             {
                 Level = 1;
                 Health = 100;
-                Attack = 100;
-                Defense = 100;
+                Attack = "1d4";
+                ArmorClass = 10;
             }
             else if (Race == "Dwarf")
             {
                 Level = 1;
                 Health = 130;
-                Attack = 80;
-                Defense = 90;
+                Attack = "1d4";
+                ArmorClass = 11;
             }
             else if (Race == "Elf")
             {
                 Level = 1;
                 Health = 80;
-                Attack = 110;
-                Defense = 110;
+                Attack = "1d4";
+                ArmorClass = 12;
             }
 
             if (Specialization == "Fighter")
@@ -79,7 +79,7 @@ namespace TheGame
             Console.WriteLine("\nHero Stats\n" +
                 "Health: {0}\n" +
                 "Attack: {1}\n" +
-                "Defense: {2}\n", Health, Attack, Defense);
+                "Defense: {2}\n", Health, Attack, ArmorClass);
             Thread.Sleep(1000);
         }
     }
