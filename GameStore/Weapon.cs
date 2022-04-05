@@ -9,8 +9,8 @@ namespace TheGame
     public class Weapon : Items
     {
         private int AttackRating;
-        private int BaseDamage;
-        public Weapon(int storePrice, int playerPrice, string itemType, string raceType, string itemName, int attackRating, int baseDamage) : base(storePrice, playerPrice, itemType, raceType, itemName)
+        private string BaseDamage;
+        public Weapon(int storePrice, int playerPrice, string itemType, string raceType, string itemName, int attackRating, string baseDamage) : base(storePrice, playerPrice, itemType, raceType, itemName)
         {
             this.StorePrice = storePrice;
             this.PlayerSellPrice = playerPrice;
@@ -19,6 +19,11 @@ namespace TheGame
             this.ItemName = itemName;
             this.AttackRating = attackRating;
             this.BaseDamage = baseDamage;
+        }
+
+        public string GetWeaponDamageRoll()
+        {
+            return this.BaseDamage;
         }
     }
 }
