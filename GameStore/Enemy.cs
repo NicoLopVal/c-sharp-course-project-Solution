@@ -19,7 +19,7 @@ namespace TheGame
                 Level = 5;
                 Health = 110;
                 Attack = 110;
-                Defense = 110;
+                ArmorClass = 8;
                 Technique = "Stone Throw";
             }
             else if (Name == "Orc")
@@ -27,7 +27,7 @@ namespace TheGame
                 Level = 10;
                 Health = 150;
                 Attack = 150;
-                Defense = 150;
+                ArmorClass = 11;
                 Technique = "Axe Sweep";
             }
             else if (Name == "Golem")
@@ -35,7 +35,7 @@ namespace TheGame
                 Level = 20;
                 Health = 500;
                 Attack = 200;
-                Defense = 200;
+                ArmorClass = 15;
                 Technique = "Totemstorm";
             }
             else if (Name == "Dragon")
@@ -43,7 +43,7 @@ namespace TheGame
                 Level = 50;
                 Health = 1000;
                 Attack = 300;
-                Defense = 300;
+                ArmorClass = 17;
                 Technique = "Firebreath";
             }
 
@@ -52,7 +52,7 @@ namespace TheGame
             Console.WriteLine("\nEnemy Stats\n" +
                 "Health: {0}\n" +
                 "Attack: {1}\n" +
-                "Defense: {2}\n", Health, Attack, Defense);
+                "Defense: {2}\n", Health, Attack, ArmorClass);
             Thread.Sleep(1000);
         }
     }
