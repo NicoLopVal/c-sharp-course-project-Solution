@@ -18,7 +18,7 @@ namespace TheGame
             {
                 Level = 5;
                 Health = 110;
-                Attack = 110;
+                Attack = "1d4";
                 ArmorClass = 8;
                 Technique = "Stone Throw";
             }
@@ -26,7 +26,7 @@ namespace TheGame
             {
                 Level = 10;
                 Health = 150;
-                Attack = 150;
+                Attack = "2d4";
                 ArmorClass = 11;
                 Technique = "Axe Sweep";
             }
@@ -34,7 +34,7 @@ namespace TheGame
             {
                 Level = 20;
                 Health = 500;
-                Attack = 200;
+                Attack = "3d4";
                 ArmorClass = 15;
                 Technique = "Totemstorm";
             }
@@ -42,7 +42,7 @@ namespace TheGame
             {
                 Level = 50;
                 Health = 1000;
-                Attack = 300;
+                Attack = "5d6";
                 ArmorClass = 17;
                 Technique = "Firebreath";
             }

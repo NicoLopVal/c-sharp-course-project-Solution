@@ -5,7 +5,7 @@
         public string Name;
         public int Level;
         public int Health;
-        public int Attack;
+        public string Attack;
         public int ArmorClass;
         public string Technique;
 
