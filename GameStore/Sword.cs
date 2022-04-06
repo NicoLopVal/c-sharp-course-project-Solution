@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace TheGame
 {
-    public abstract class Weapon : Items
+    public class Sword : Weapon
     {
-        protected string BaseDamage;
-        public Weapon(int storePrice, int playerPrice, string itemSubClass, string raceType, string itemName, string baseDamage) : base(storePrice, playerPrice, itemSubClass, raceType, itemName)
+        public Sword(int storePrice, int playerPrice, string itemSubClass, string raceType, string itemName, string baseDamage)
+            : base(storePrice, playerPrice, itemSubClass, raceType, itemName, baseDamage)
         {
             this.StorePrice = storePrice;
             this.PlayerSellPrice = playerPrice;
@@ -17,11 +17,6 @@ namespace TheGame
             this.RaceType = raceType;
             this.ItemName = itemName;
             this.BaseDamage = baseDamage;
-        }
-
-        public string GetWeaponDamageRoll()
-        {
-            return this.BaseDamage;
         }
     }
 }

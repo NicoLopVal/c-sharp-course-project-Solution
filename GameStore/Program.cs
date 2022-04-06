@@ -7,6 +7,7 @@
             //dibuja bienvenida
             var welcome = new Welcome();
             var drawer = new DrawerAct();
+            var market = new Store();
 
             drawer.Draw(welcome);
         
@@ -64,7 +65,7 @@
                     }
                     else if (inputInt == 3)
                     {
-                        // var market = new Market();
+                        //market.Open();
                     }
                 }
 

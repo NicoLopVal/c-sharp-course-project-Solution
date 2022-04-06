@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace TheGame
 {
-    public class Items
+    public abstract class Items
     {
         protected int StorePrice;
         protected int PlayerSellPrice;
-        protected string ItemType = "";       // Could be a weapon or armor
+        protected string itemSubClass = "";
         protected string RaceType = "";
         protected string ItemName = "";
 
-        protected Items(int storePrice, int playerPrice, string itemType, string raceType, string itemName)
+        protected Items(int storePrice, int playerPrice, string itemSubClass, string raceType, string itemName)
         {
             this.StorePrice = storePrice;
             this.PlayerSellPrice = playerPrice;
-            this.ItemType = itemType;
+            this.itemSubClass = itemSubClass;
             this.RaceType = raceType;
             this.ItemName = itemName;
         }
@@ -33,8 +33,8 @@ namespace TheGame
                 case "PlayerSellPrice":
                     return this.PlayerSellPrice.ToString();
 
-                case "ItemType":
-                    return this.ItemType;
+                case "itemSubClass":
+                    return this.itemSubClass;
 
                 case "RaceType":
                     return this.RaceType;
