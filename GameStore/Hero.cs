@@ -8,7 +8,7 @@ namespace TheGame
     {
         private string Race;
         private string Specialization;
-
+        private Weapon weapon;
         private List<string> RaceList;
         private List<string> SpecializationList;
 
