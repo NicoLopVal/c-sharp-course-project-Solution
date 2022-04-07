@@ -9,6 +9,12 @@ namespace TheGame
         private string Race;
         private string Specialization;
         private Weapon weapon;
+        private int Purse;
+        private Helmet? MyHelm;
+        private Platebody? MyPlatebody;
+        private Boots? MyBoots;
+        private Shield? MyShield;
+        private Weapon? MyWeapon;
         private List<string> RaceList;
         private List<string> SpecializationList;
 
@@ -94,6 +100,177 @@ namespace TheGame
         public void restoreHP()
         {
             currentHealth = maxHealth;
+        public int GetMoney()
+        {
+            return Purse;
+        }
+
+        public void AddMoneyToPurse(int addValue)
+        {
+            Purse += addValue;
+        }
+
+        public void ReduceMoneyFromPurse(int reduceValue)
+        {
+            Purse -= reduceValue;
+        }
+
+        public string GetRace()
+        {
+            return this.Race;
+        }
+
+        public string GetSpecialization()
+        {
+            return this.Specialization;
+        }
+
+        public Dictionary<string,Items> GetArmor()
+        {
+            var myItems = new Dictionary<string,Items>();
+            myItems.Add("Helmet", MyHelm);
+            myItems.Add("Platebody", MyPlatebody);
+            myItems.Add("Boots", MyBoots);
+            myItems.Add("Shield", MyShield);
+            myItems.Add("Weapon", MyWeapon);
+
+            return myItems;
+        }
+
+        public bool EquipItem(Items selectedItem)
+        {
+            if (selectedItem is Weapon)
+            {
+                if (this.MyWeapon == null)
+                {
+                    MyWeapon = (Weapon)selectedItem;
+                    return true;
+                }
+
+                Console.WriteLine("Item could not be equiped because you're already using " + MyWeapon.GetProperty("ItemName"));
+                return false;
+            }
+            else if (selectedItem is Helmet)
+            {
+                if (this.MyHelm == null)
+                {
+                    MyHelm = (Helmet)selectedItem;
+                    return true;
+                }
+
+                Console.WriteLine("Item could not be equiped because you're already using " + MyHelm.GetProperty("ItemName"));
+                return false;
+            }
+            else if (selectedItem is Platebody)
+            {
+                if (this.MyPlatebody == null)
+                {
+                    MyPlatebody = (Platebody)selectedItem;
+                    return true;
+                }
+
+                Console.WriteLine("Item could not be equiped because you're already using " + MyPlatebody.GetProperty("ItemName"));
+                return false;
+            }
+            else if (selectedItem is Boots)
+            {
+                if (this.MyBoots == null)
+                {
+                    MyBoots = (Boots)selectedItem;
+                    return true;
+                }
+
+                Console.WriteLine("Item could not be equiped because you're already using " + MyBoots.GetProperty("ItemName"));
+                return false;
+            }
+            else if (selectedItem is Shield)
+            {
+                if (this.MyShield == null)
+                {
+                    MyShield = (Shield)selectedItem;
+                    return true;
+                }
+
+                Console.WriteLine("Item could not be equiped because you're already using " + MyShield.GetProperty("ItemName"));
+                return false;
+            }
+            else
+            {
+                Console.WriteLine("Item could not be equiped.");
+                return false;
+            }
+        }
+
+        public bool RemoveItem(Items removeItem)
+        {
+            bool result = false;
+            if(removeItem is Helmet)
+            {
+                try
+                {
+                    this.MyHelm = null;
+                    result = true;
+                }
+                catch
+                {
+                    result = false;
+                }
+            }
+            else if (removeItem is Platebody)
+            {
+                try
+                {
+                    this.MyPlatebody = null;
+                    result = true;
+                }
+                catch
+                {
+                    result = false;
+                }
+            }
+            else if (removeItem is Boots)
+            {
+                try
+                {
+                    this.MyBoots = null;
+                    result = true;
+                }
+                catch
+                {
+                    result = false;
+                }
+            }
+            else if (removeItem is Shield)
+            {
+                try
+                {
+                    this.MyShield = null;
+                    result = true;
+                }
+                catch
+                {
+                    result = false;
+                }
+            }
+            else if (removeItem is Weapon)
+            {
+                try
+                {
+                    this.MyWeapon = null;
+                    result = true;
+                }
+                catch
+                {
+                    result = false;
+                }
+            }
+
+            if (result)
+                Console.WriteLine("{0} was removed and sold!", removeItem.GetProperty("ItemName"));
+            else
+                Console.WriteLine("Didn't remove anything");
+
+            return result;
         }
     }
 }

@@ -9,10 +9,12 @@ namespace TheGame
             //dibuja bienvenida
             var welcome = new Welcome();
             var drawer = new DrawerAct();
-            var market = new Store();
 
             drawer.Draw(welcome);
-        
+            //var myHero = new Hero();              FOR TESTING PURPOSES
+            //myHero.AddMoneyToPurse(99999);
+            //Store.InitializeStore();
+            //Store.Open(myHero);
 
             try
             {
