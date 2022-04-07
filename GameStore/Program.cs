@@ -40,8 +40,6 @@ namespace TheGame
                 }
                 else if (inputInt == 2)
                     throw new Exception();
-                Console.WriteLine("Adventure is over. Thanks for playing!");
-
             }
             catch (Exception)
             {
@@ -53,8 +51,9 @@ namespace TheGame
         {
             var enemyCount = 0;
             Hero hero = new Hero();
+            hero.InitializeHero();
             bool HeroVictory = true;
-            while (inputInt >= 1 && inputInt < 4 && HeroVictory && enemyCount == 5)
+            while (HeroVictory && enemyCount < 5)
             {
                 Console.WriteLine("Where would you like to go?\n" +
                     "1. Enemy Boss Fight\n" +
@@ -65,7 +64,9 @@ namespace TheGame
                 inputInt = Convert.ToInt32(Console.ReadLine());
                 Console.Clear();
 
-                if (inputInt == 1)
+                if (inputInt < 1 || inputInt > 3)
+                    break;
+                else if (inputInt == 1)
                 {
                     var enemy = new Enemy(enemyCount);
                     HeroVictory = BattleSituation.BattleStart(hero, enemy);
