@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TheGame
 {
-    public class Axe : Weapon
+    public class Staff : Weapon
     {
-        public Axe(int storePrice, int playerPrice, string itemSubClass, string raceType, string itemName, string baseDamage)
+        public Staff(int storePrice, int playerPrice, string itemSubClass, string raceType, string itemName, string baseDamage)
             : base(storePrice, playerPrice, itemSubClass, raceType, itemName, baseDamage)
         {
             this.StorePrice = storePrice;
