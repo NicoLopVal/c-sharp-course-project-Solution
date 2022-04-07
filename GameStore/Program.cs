@@ -34,7 +34,7 @@ namespace TheGame
                
                 if (inputInt == 1)
                 {
-                    Program.newAdventure(inputInt);
+                    newAdventure(inputInt);
                 }
                 else if (inputInt == 2)
                     throw new Exception();
@@ -51,7 +51,8 @@ namespace TheGame
         {
             var enemyCount = 0;
             Hero hero = new Hero();
-            while (inputInt >= 1 && inputInt < 4)
+            bool HeroVictory = true;
+            while (inputInt >= 1 && inputInt < 4 && HeroVictory)
             {
                 Console.WriteLine("Where would you like to go?\n" +
                     "1. Enemy Boss Fight\n" +
@@ -65,7 +66,22 @@ namespace TheGame
                 if (inputInt == 1)
                 {
                     var enemy = new Enemy(enemyCount);
-                    BattleSituation.BattleStart(hero, enemy);
+                    HeroVictory = BattleSituation.BattleStart(hero, enemy);
+                    if (HeroVictory)
+                    {
+
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤");
+                        Console.WriteLine("----------------------------------- You've been defeated! ------------------------------------------");
+                        Console.WriteLine("------------------------------- Your hero has fallen in battle -------------------------------------");
+                        Console.WriteLine("-------------------------------- Your Journey is now at an end -------------------------------------");
+                        Console.WriteLine("------------------------- Maybe next time, a true champion will arise ------------------------------");
+                        Console.WriteLine("¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤");
+                    }
+
                     // If vence al boss then enemyCount++, lo que significa que sigue pelear contra el siguiente boss.
                 }
                 else if (inputInt == 2)

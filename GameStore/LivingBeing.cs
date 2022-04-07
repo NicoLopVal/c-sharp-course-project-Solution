@@ -17,5 +17,9 @@
         {
             return this.ArmorClass;
         }
+        public int getHP()
+        {
+            return this.Health;
+        }
     }
 }
