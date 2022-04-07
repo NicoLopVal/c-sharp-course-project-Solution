@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 
@@ -19,6 +19,10 @@ namespace TheGame
         private List<string> SpecializationList;
 
         public Hero()
+        {
+        }
+
+        public void InitializeHero()
         {
             Console.WriteLine("Type a name for your hero:");
             Name = Console.ReadLine();
