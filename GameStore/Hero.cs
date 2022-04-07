@@ -100,6 +100,7 @@ namespace TheGame
         public void restoreHP()
         {
             currentHealth = maxHealth;
+        }
         public int GetMoney()
         {
             return Purse;
