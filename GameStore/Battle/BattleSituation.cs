@@ -26,6 +26,7 @@ namespace TheGame.Battle
                 {
                     HeroVictory = true;
                     BattleContinues = false;
+                    hero.restoreHP();
                 }
             }
             return HeroVictory;
@@ -33,10 +34,23 @@ namespace TheGame.Battle
 
         public static void BattleRound (Hero hero, Enemy enemy)
         {
+            Console.Clear();
+
+            Console.WriteLine("Your HP: " + hero.getHP());
+            Console.WriteLine("Your Attack: " + hero.getAttackRoll());
+            Console.WriteLine("Your Armor: " + hero.getArmorClass());
+            Console.WriteLine("Enemy HP: " + enemy.getHP());
+            Console.WriteLine("Enemy Attack: " + enemy.getAttackRoll());
+            Console.WriteLine("Enemy Armor: " + enemy.getArmorClass());
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
             Console.WriteLine("Select what sort of attack you wish to use!");
             Console.WriteLine("1. Normal Attack");
             Console.WriteLine("2. Risky attack (more damage, less likely to hit)");
             Console.WriteLine("3. Cautious attack (less damage, more likely to hit)");
+
+
         }
     }
 }

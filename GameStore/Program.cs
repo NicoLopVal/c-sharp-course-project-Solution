@@ -52,7 +52,7 @@ namespace TheGame
             var enemyCount = 0;
             Hero hero = new Hero();
             bool HeroVictory = true;
-            while (inputInt >= 1 && inputInt < 4 && HeroVictory)
+            while (inputInt >= 1 && inputInt < 4 && HeroVictory && enemyCount == 5)
             {
                 Console.WriteLine("Where would you like to go?\n" +
                     "1. Enemy Boss Fight\n" +
@@ -69,7 +69,15 @@ namespace TheGame
                     HeroVictory = BattleSituation.BattleStart(hero, enemy);
                     if (HeroVictory)
                     {
-
+                        enemyCount++;
+                        Console.Clear();
+                        Console.WriteLine("¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤");
+                        Console.WriteLine("------------------------------------- Congratulations! ---------------------------------------------");
+                        Console.WriteLine("----------------------------- You've defeated an enemy in battle -----------------------------------");
+                        Console.WriteLine("--------------------------------- Your Journey will continue ---------------------------------------");
+                        Console.WriteLine("--------------------------- Enjoy the spoils, and prepare yourself! --------------------------------");
+                        Console.WriteLine("¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤");
+                        
                     }
                     else
                     {

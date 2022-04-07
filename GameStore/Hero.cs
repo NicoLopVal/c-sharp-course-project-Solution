@@ -37,21 +37,24 @@ namespace TheGame
             if (Race == "Human")
             {
                 Level = 1;
-                Health = 100;
+                maxHealth = 100;
+                currentHealth = maxHealth;
                 Attack = "1d4";
                 ArmorClass = 10;
             }
             else if (Race == "Dwarf")
             {
                 Level = 1;
-                Health = 130;
+                maxHealth = 130;
+                currentHealth = maxHealth;
                 Attack = "1d4";
                 ArmorClass = 11;
             }
             else if (Race == "Elf")
             {
                 Level = 1;
-                Health = 80;
+                maxHealth = 80;
+                currentHealth = maxHealth;
                 Attack = "1d4";
                 ArmorClass = 12;
             }
@@ -79,8 +82,18 @@ namespace TheGame
             Console.WriteLine("\nHero Stats\n" +
                 "Health: {0}\n" +
                 "Attack: {1}\n" +
-                "Defense: {2}\n", Health, Attack, ArmorClass);
+                "Defense: {2}\n", currentHealth, Attack, ArmorClass);
             Thread.Sleep(1000);
+        }
+
+        public new string getAttackRoll()
+        {
+            return weapon.GetWeaponDamageRoll();
+        }
+
+        public void restoreHP()
+        {
+            currentHealth = maxHealth;
         }
     }
 }
