@@ -17,7 +17,8 @@ namespace TheGame
             if (Name == "Goblin")
             {
                 Level = 5;
-                Health = 110;
+                maxHealth = 110;
+                currentHealth = maxHealth;
                 Attack = "1d4";
                 ArmorClass = 8;
                 Technique = "Stone Throw";
@@ -25,7 +26,8 @@ namespace TheGame
             else if (Name == "Orc")
             {
                 Level = 10;
-                Health = 150;
+                maxHealth = 150;
+                currentHealth = maxHealth;
                 Attack = "2d4";
                 ArmorClass = 11;
                 Technique = "Axe Sweep";
@@ -33,7 +35,8 @@ namespace TheGame
             else if (Name == "Golem")
             {
                 Level = 20;
-                Health = 500;
+                maxHealth = 500;
+                currentHealth = maxHealth;
                 Attack = "3d4";
                 ArmorClass = 15;
                 Technique = "Totemstorm";
@@ -41,7 +44,8 @@ namespace TheGame
             else if (Name == "Dragon")
             {
                 Level = 50;
-                Health = 1000;
+                maxHealth = 1000;
+                currentHealth = maxHealth;
                 Attack = "5d6";
                 ArmorClass = 17;
                 Technique = "Firebreath";
@@ -52,7 +56,7 @@ namespace TheGame
             Console.WriteLine("\nEnemy Stats\n" +
                 "Health: {0}\n" +
                 "Attack: {1}\n" +
-                "Defense: {2}\n", Health, Attack, ArmorClass);
+                "Defense: {2}\n", currentHealth, Attack, ArmorClass);
             Thread.Sleep(1000);
         }
     }
