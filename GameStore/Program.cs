@@ -80,6 +80,7 @@ namespace TheGame
                         Console.WriteLine("--------------------------------- Your Journey will continue ---------------------------------------");
                         Console.WriteLine("--------------------------- Enjoy the spoils, and prepare yourself! --------------------------------");
                         Console.WriteLine("¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤");
+                        LootDropCalculator.DropLoot(hero);
                         
                     }
                     else
@@ -91,6 +92,7 @@ namespace TheGame
                         Console.WriteLine("-------------------------------- Your Journey is now at an end -------------------------------------");
                         Console.WriteLine("------------------------- Maybe next time, a true champion will arise ------------------------------");
                         Console.WriteLine("¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤");
+                        Console.ReadKey();
                     }
 
                     // If vence al boss then enemyCount++, lo que significa que sigue pelear contra el siguiente boss.

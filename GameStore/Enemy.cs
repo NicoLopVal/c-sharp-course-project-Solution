@@ -6,7 +6,7 @@ namespace TheGame
 {
     public class Enemy : LivingBeing
     {
-
+        private List<Items> ItemList;
         private List<string> NameList;
         
         public Enemy(int enemyCount)
@@ -29,7 +29,7 @@ namespace TheGame
                 maxHealth = 150;
                 currentHealth = maxHealth;
                 Attack = "2d4";
-                ArmorClass = 11;
+                ArmorClass = 10;
                 Technique = "Axe Sweep";
             }
             else if (Name == "Golem")
@@ -38,7 +38,7 @@ namespace TheGame
                 maxHealth = 500;
                 currentHealth = maxHealth;
                 Attack = "3d4";
-                ArmorClass = 15;
+                ArmorClass = 13;
                 Technique = "Totemstorm";
             }
             else if (Name == "Dragon")
@@ -47,7 +47,7 @@ namespace TheGame
                 maxHealth = 1000;
                 currentHealth = maxHealth;
                 Attack = "5d6";
-                ArmorClass = 17;
+                ArmorClass = 15;
                 Technique = "Firebreath";
             }
 

@@ -9,18 +9,21 @@ namespace TheGame.CombatCalculator
 {
     public static class CombatCalculator
     {
-        public static void Attack (LivingBeing attacker, LivingBeing defender, int attackModifier)
+        public static void Attack (LivingBeing attacker, LivingBeing defender, int rollModifier, int attackModifier)
         {
             var attackerDamageRoll = "";// = attacker.GetWeapon().GetWeaponDamageRoll();
-            var attackRollModifier = attackModifier;
+            var attackRollModifier = rollModifier;
             var defenderArmorClass = defender.getArmorClass();
             int TotalDamage = 0;
 
             if(rollForAttack(attackRollModifier) > defenderArmorClass)
             {
-                TotalDamage = DamageCalculation(attackerDamageRoll);
+                TotalDamage = DamageCalculation(attackerDamageRoll) + attackModifier;
             }
-            defender.takeDamage(TotalDamage);            
+            if (TotalDamage < 1)
+                TotalDamage = 1;
+            defender.takeDamage(TotalDamage);
+            Console.WriteLine(TotalDamage + " HP");
         }
 
         /*public static void SpellCasting(Spell spell, LivingBeing defender)
