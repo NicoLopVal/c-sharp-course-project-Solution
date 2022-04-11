@@ -6,6 +6,72 @@ namespace TheGame
 {
     public class Enemy : LivingBeing
     {
+        private static String[] Dragon = new String[]{@"       ,===:'.,            `-._              ",
+                                                     @"            `:.`---.__         `-._          ",
+                                                     @"              `:.     `--.         `.        ",
+                                                     @"                \.        `.         `.      ",
+                                                     @"        (,,(,    \.         `.   ____,-`.,   ",
+                                                     @"     (,'     `/   \.   ,--.___`.'            ",
+                                                     @" ,  ,'  ,--.  `,   \.;'         `            ",
+                                                     @"  `{D, {    \  :    \;                       ",
+                                                     @"    V,,'    /  /    //                       ",
+                                                     @"    j;;    /  ,' ,-//.    ,---.      ,       ",
+                                                     @"    \|'   /  ,' /  _  \  /  _  \   ,'/       ",
+                                                     @"          \  `'  / \  `'  / \  `.' /         ",
+                                                     @"           `.___,'   `.__,'   `.__,'         ",
+        };
+
+        private static String[] Goblin = new String[]{@"             ,      ,           ",
+                                                      @"            /(.-""-.)\			",
+                                                      @"        |\  \/      \/  /|		",
+                                                      @"        | \ / =.  .= \ / |		",
+                                                      @"        \( \   o\/o   / )/		",
+                                                      @"         \_, '-/  \-' ,_/		",
+                                                      @"           /   \__/   \			",
+                                                      @"           \ \__/\__/ /			",
+                                                      @"         ___\ \|--|/ /___		",
+                                                      @"       /`    \      /    `\		",
+                                                      @"      /       '----'       \	",
+        };
+
+        private static String[] Golem = new String[]{@"           ___                      ",
+                                                     @"         .';:;'.					   ",
+                                                     @"        /_' _' /\   __			   ",
+                                                     @"        ;a/ e= J/-''  '.			   ",
+                                                     @"        \ ~_   (  -'  ( ;_ ,.	   ",
+                                                     @"         L~''_.    -.  \ ./  )	   ",
+                                                     @"         ,'-' '-._  _;  )'   (	   ",
+                                                     @"       .' .'   _.'')  \  \(  |      ",
+                                                     @"      /  (  .-'   __\{`', \  |	   ",
+                                                     @"     / .'  /  _.-'   '  . /  |      ",
+                                                     @"    / /    '-._'-,     / / \ (	   ",
+                                                     @" __/ (_    ,;' .-'    / /  /_'-._   ",
+                                                     @"`' - '` ~`  ccc.'   __.','     \j\L\",
+                                                     @"                 .='/|\7      	   ",
+                                                     @"     	           ' `			   ",
+        };
+
+        private static String[] Orc = new String[]{@"         _......._               ",
+                                                   @"       .-'.'.'.'.'.'.`-.		  ",
+                                                   @"     .'.'.'.'.'.'.'.'.'.`.		  ",
+                                                   @"    /.'.'               '.\	  ",
+                                                   @"    |.'    _.--...--._     |	  ",
+                                                   @"    \    `._.-.....-._.'   /	  ",
+                                                   @"    |     _..- .-. -.._   |	  ",
+                                                   @" .-.'    `.   ((@))  .'   '.-.	  ",
+                                                   @"( ^ \      `--.   .-'     / ^ )  ",
+                                                   @" \  /         .   .       \  /	  ",
+                                                   @" /          .'     '.  .-    \	  ",
+                                                   @"( _.\    \ (_`-._.-'_)    /._\)  ",
+                                                   @" `-' \   ' .--.          / `-'	  ",
+                                                   @"     |  / /|_| `-._.'\   |       ",
+                                                   @"     |   |       |_| |   /-.._   ",
+                                                   @" _..-\   `.--.______.'  |		  ",
+                                                   @"      \       .....     |        ",
+                                                   @"       `.  .'      `.  /		  ",
+                                                   @"         \           .'          ",
+                                                   @"          `-..___..-`			  ",
+        };
 
         private List<string> NameList;
         
@@ -22,6 +88,8 @@ namespace TheGame
                 Attack = "1d4";
                 ArmorClass = 8;
                 Technique = "Stone Throw";
+                Console.WriteLine();
+                Drawer.Draw(Goblin);
             }
             else if (Name == "Orc")
             {
@@ -31,6 +99,8 @@ namespace TheGame
                 Attack = "2d4";
                 ArmorClass = 11;
                 Technique = "Axe Sweep";
+                Console.WriteLine();
+                Drawer.Draw(Orc);
             }
             else if (Name == "Golem")
             {
@@ -40,6 +110,8 @@ namespace TheGame
                 Attack = "3d4";
                 ArmorClass = 15;
                 Technique = "Totemstorm";
+                Console.WriteLine();
+                Drawer.Draw(Golem);
             }
             else if (Name == "Dragon")
             {
@@ -49,6 +121,8 @@ namespace TheGame
                 Attack = "5d6";
                 ArmorClass = 17;
                 Technique = "Firebreath";
+                Console.WriteLine();
+                Drawer.Draw(Dragon);
             }
 
             Console.WriteLine("{0} has appeared. Get ready to fight!", Name);

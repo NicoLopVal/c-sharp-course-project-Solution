@@ -6,6 +6,67 @@ namespace TheGame
 {
     public class Hero : LivingBeing
     {
+        private static String[] Human = new String[]{ @"      /-.{}  \ 		",
+                                                      @"      | _\__.|		",
+                                                      @"      \/^)^ \/		",
+                                                      @"       \ =  /		",
+                                                      @"  .---./`--`\.--._	",
+                                                      @" /     `;--'`     \	",
+                                                      @";        /`       ;	",
+                                                      @"|       |*        | ",
+                                                      @"/   |   |     |    \",
+                                                      @"|    \  |*    /    |",
+                                                      @"\_   |\_|____/|  __/",
+                                                      @"  \__//======\\__/	",
+                                                      @"  / //_      _\\ \	",
+                                                      @"  -'  |`""""`|  `-	",
+                                                      @"      |  L   |		",
+                                                      @"      >_ || _<		",
+                                                      @"      |  ||  |		",
+                                                      @"      |  ||  |		",
+                                                      @"     /   ||   \		",
+                                                      @"    /    /,    \	",
+                                                      @"    `|' |`'|' |''`  ",
+                                                      @"     /  )  /  )  	",
+                                                      @"    /__/  /__/		",
+        };    
+
+        private static String[] Elf = new String[]{@"           .-----.   ",
+                                                      @" \ ' /   _/    )/	 ",
+                                                      @"- ( ) -('---''--)	 ",
+                                                      @" / . \((()\^_^/)()	 ",
+                                                      @"  \\_\ (()_)-((()()	 ",
+                                                      @"   '- \ )/\._./(()	 ",
+                                                      @"     '/\/( X   ) \	 ",
+                                                      @"     (___)|___/ ) \	 ",
+                                                      @"          |.#_|(___) ",
+                                                      @"         /\    \ ( (_",
+                                                      @"         \/\/\/\) \\ ",
+                                                      @"        | / \ |      ",
+                                                      @"         |(   \|	 ",
+                                                      @"        _|_)__|_\_	 ",
+                                                      @"        )...()...(	 ",
+                                                      @"         | (   \ |   ",
+                                                      @"      .-'__,)  (  \	 ",
+                                                      @"               '\_-, ",
+        };
+        
+        private static String[] Dwarf = new String[]{@"                        __.--|~|--.__                               ,,;/;    ",
+                                                   @"                         /~     | |    ;~\                        ,;;;/;;'	  ",
+                                                   @"                        /|      | |    ;~\\                     ,;;;;/;;;'	  ",
+                                                   @"                       |/|      \_/   ;;;|\                    ,;;;;/;;;;'   ",
+                                                   @"                       |/ \          ;;;/  )                 ,;;;;/;;;;;'    ",
+                                                   @"                   ___ | ______     ;_____ |___....__      ,;;;;/;;;;;'      ",
+                                                   @"             ___.-~ \\(| \  \.\ \__/ /./ /:|)~   ~   \   ,;;;;/;;;;;'        ",
+                                                   @"         /~~~    ~\    |  ~-.     |   .-~: |//  _.-~~--,;;;;/;;;;;'          ",
+                                                   @"        (.-~___     \.'|    | /-.__.-\|::::| //~     ,;;;;/;;;;;'  		  ",
+                                                   @"        /      ~~--._ \|   /          `\:: |/      ,;;;;/;;;;;'			  ",
+                                                   @"     .-|             ~~|   |  /V""""V\ |:  |     ,;;;;/;;;;;' \			  ",
+                                                   @"    /                   \  |  ~`^~~^'~ |  /    ,;;;;/;;;;;'    ;			  ",
+                                                   @"   (        \             \|`\._____./'|/    ,;;;;/;;;;;'      '\			  ",
+                                                   @"  / \        \                             ,;;;;/;;;;;'     /    |			  ",
+        };
+        
         private string Race;
         private string Specialization;
         private Weapon weapon;
@@ -17,6 +78,7 @@ namespace TheGame
         private Weapon? MyWeapon;
         private List<string> RaceList;
         private List<string> SpecializationList;
+
 
         public Hero()
         {
@@ -51,6 +113,8 @@ namespace TheGame
                 currentHealth = maxHealth;
                 Attack = "1d4";
                 ArmorClass = 10;
+                Console.WriteLine();
+                Drawer.Draw(Human);
             }
             else if (Race == "Dwarf")
             {
@@ -59,6 +123,8 @@ namespace TheGame
                 currentHealth = maxHealth;
                 Attack = "1d4";
                 ArmorClass = 11;
+                Console.WriteLine();
+                Drawer.Draw(Dwarf);
             }
             else if (Race == "Elf")
             {
@@ -67,6 +133,8 @@ namespace TheGame
                 currentHealth = maxHealth;
                 Attack = "1d4";
                 ArmorClass = 12;
+                Console.WriteLine();
+                Drawer.Draw(Elf);
             }
 
             if (Specialization == "Fighter")
