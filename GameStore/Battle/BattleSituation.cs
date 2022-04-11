@@ -34,8 +34,6 @@ namespace TheGame.Battle
 
         public static void BattleRound (Hero hero, Enemy enemy)
         {
-            Console.Clear();
-
             Console.WriteLine("Your HP: " + hero.getHP());
             Console.WriteLine("Your Attack: " + hero.getAttackRoll());
             Console.WriteLine("Your Armor: " + hero.getArmorClass());
@@ -50,7 +48,35 @@ namespace TheGame.Battle
             Console.WriteLine("2. Risky attack (more damage, less likely to hit)");
             Console.WriteLine("3. Cautious attack (less damage, more likely to hit)");
 
-
+            Console.Clear();
+            Console.WriteLine("You've damaged your enemy by:");
+            bool invalidImput = false;
+            do {
+                int attackChoice = Convert.ToInt32(Console.ReadLine());
+                switch (attackChoice)
+                {
+                    case 1:
+                        {
+                            CombatCalculator.CombatCalculator.Attack(hero, enemy, 0, 0);
+                        } break;
+                    case 2:
+                        {
+                            CombatCalculator.CombatCalculator.Attack(hero, enemy, 0, 4);
+                        }
+                        break;
+                    case 3:
+                        {
+                            CombatCalculator.CombatCalculator.Attack(hero, enemy, 0, -2);
+                        }
+                        break;
+                    default:
+                        {
+                            invalidImput = true;
+                        }break;
+                }
+            } while (!invalidImput);
+            Console.WriteLine("The enemy has dealt you damaged by:");
+            CombatCalculator.CombatCalculator.Attack(enemy, hero, 0, 0);
         }
     }
 }

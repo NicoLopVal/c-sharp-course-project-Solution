@@ -1,4 +1,4 @@
-﻿using TheGame.Battle;
+using TheGame.Battle;
 
 namespace TheGame
 {
@@ -54,13 +54,15 @@ namespace TheGame
 
                 var inputInt = Convert.ToInt32(Console.ReadLine());
                 Console.Clear();
-               
+
                 if (inputInt == 1)
                 {
-                    newAdventure(inputInt);
+                    newAdventure();
                 }
                 else if (inputInt == 2)
+                {
                     throw new Exception();
+                }
             }
             catch (Exception)
             {
@@ -68,7 +70,7 @@ namespace TheGame
             }
         }
 
-        public static void newAdventure(int inputInt)
+        public static void newAdventure()
         {
             var enemyCount = 0;
             Hero hero = new Hero();
@@ -80,13 +82,18 @@ namespace TheGame
                     "1. Enemy Boss Fight\n" +
                     "2. Train at the barracks \n" +
                     "3. Go to the market \n" +
-                    "4. Exit game");
+                    "Type \"Exit\" to exit the game.");
 
-                inputInt = Convert.ToInt32(Console.ReadLine());
+                var input = Console.ReadLine();
                 Console.Clear();
+                int inputInt;
+                int.TryParse(input, out inputInt);
 
-                if (inputInt < 1 || inputInt > 3)
+                if (input.ToLower() == "exit")
+                {
+                    Console.WriteLine("You decided to end your Journey! Game will be closed.");
                     break;
+                }
                 else if (inputInt == 1)
                 {
                     var enemy = new Enemy(enemyCount);
@@ -101,6 +108,8 @@ namespace TheGame
                         Console.WriteLine("--------------------------------- Your Journey will continue ---------------------------------------");
                         Console.WriteLine("--------------------------- Enjoy the spoils, and prepare yourself! --------------------------------");
                         Console.WriteLine("¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤");
+
+                        LootDropCalculator.DropLoot(hero);
                         
                     }
                     else
@@ -112,6 +121,7 @@ namespace TheGame
                         Console.WriteLine("-------------------------------- Your Journey is now at an end -------------------------------------");
                         Console.WriteLine("------------------------- Maybe next time, a true champion will arise ------------------------------");
                         Console.WriteLine("¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤");
+                        Console.ReadKey();
                     }
 
                     // If vence al boss then enemyCount++, lo que significa que sigue pelear contra el siguiente boss.
