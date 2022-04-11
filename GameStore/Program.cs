@@ -4,13 +4,34 @@ namespace TheGame
 {
     public static class Program
     {
+        private static String[] Welcome = new String[]{@"╔╦╦╦═╦╗╔═╦═╦══╦═╗      ",
+                                                       @"║║║║╩╣╚╣═╣║║║║║╩╣        ",
+                                                       @"╚══╩═╩═╩═╩═╩╩╩╩═╝        ",
+                                                       @"          {}             ",
+                                                       @"         .--.            ",
+                                                       @"        /.--.\           ",
+                                                       @"        |====|           ",
+                                                       @"        |`::`|           ",
+                                                       @"    .-;`\..../`;_.-^-._  ",
+                                                       @"   /  |...::..|`   :   `|",
+                                                       @"  |   /'''::''|   .:.   |",
+                                                       @"  ;--'\   ::  |..:::::..|",
+                                                       @"  <__> >._::_.| ':::::' |",
+                                                       @"  |  |/   ^^  |   ':'   |",
+                                                       @"  \::/|       \    :    /",
+                                                       @"  |||\|        \   :   / ",
+                                                       @"  ''' |___/\___|`-.:.-`  ",
+                                                       @"       \_ || _/    `     ",
+                                                       @"       <_ >< _>          ",
+                                                       @"       |  ||  |          ",
+                                                       @"       |  ||  |          ",
+                                                       @"      _\.:||:./_         ",
+                                                       @"     /____/\____\        ",
+        };
+
         static void Main(string[] args)
         {
-            //dibuja bienvenida
-            var welcome = new Welcome();
-            var drawer = new DrawerAct();
-
-            drawer.Draw(welcome);
+             Drawer.Draw(Welcome);
             //var myHero = new Hero();              FOR TESTING PURPOSES
             //myHero.AddMoneyToPurse(99999);
             //Store.InitializeStore();

@@ -9,6 +9,21 @@ namespace TheGame
 {
     internal class Store
     {
+        private static String[] Store = new String[]{@"          __-----__				",
+                                                      @"     ..;;;--'~~~`--;;;..		",
+                                                      @"   /;-~  GAME MARKET  ~-.\		",
+                                                      @"  //      ,;;;;;;;;      \\		",
+                                                      @".//      ;;;;;    \       \\	",
+                                                      @"||       ;;;;(   /.|       ||	",
+                                                      @"||       ;;;;;;;   _\      ||	",
+                                                      @"||       ';;  ;;;;=        ||	",
+                                                      @"||         | ''\;;;;;;     ||	",
+                                                      @" \\     ,| '\  '|><|      //	",
+                                                      @"  \\   |     |      \    //		",
+                                                      @"   `;.,|.    |      '\.-'/		",
+                                                      @"    ~~;;;,._|___.,-;;;~'		",
+                                                      @"        ''=--'					"
+        };
         private static List<Items> items = new List<Items>();
         public Store()
         {
@@ -17,7 +32,8 @@ namespace TheGame
         public static void Open(Hero character)
         {
             var characterRace = character.GetRace();                         //UPDATE THIS TO MATCH THE CLASS USED FOR THE CHARACTER CREATED
-
+            Drawer.Draw(Store);
+            Console.WriteLine();
             Console.WriteLine("Hello " + characterRace + ", Why are you here?");       // Check with Juanma to see how to get the Race
             
             while (true)
