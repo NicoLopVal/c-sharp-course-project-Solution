@@ -6,6 +6,42 @@ namespace TheGame
 {
     public class Enemy : LivingBeing
     {
+        private static String[] WildCat = new string[] {@"                                    ,$$.       ,$$.      ",
+                                                        @"                                   ,$'`$.     ,$'`$.     ",
+                                                        @"                                   $'  `$     $'  `$     ",
+                                                        @"                                  :$    $;   :$    $;    ",
+                                                        @"                                  $$    $$   $$    $$    ",
+                                                        @"                                  $$  _.$bqgpd$._  $$    ",
+                                                        @"                                  ;$gd$$^$$$$$^$$bg$:    ",
+                                                        @"                                .d$P^*'   '*'   `*^T$b.  ",
+                                                        @"                               d$$$    ,*'   '*.    $$$b ",
+                                                        @"                              d$$$b._    o   o    _.d$$$b",
+                                                        @"                             *T$$$$$P             T$$$$$P*",
+                                                        @"                               `^T$$    :'---';    $$P^' ",
+                                                        @"                                  `$._   `---'   _.$'    ",
+                                                        @"                                 .d$$P'**-----**'T$$b.   ",
+                                                        @"                                d$$P'             `T$$b  ",
+                                                        @"                               d$$P                 T$$b ",
+                                                        @"                              d$P'.'               `.`T$b",
+                                                        @"                              `--:                   ;--'",
+                                                        @"                                 |                   |   ",
+                                                        @"                                 :                   ;   ",
+                                                        @"                                  \                 /    ",
+                                                        @"                                  .`-.           .-'.    ",
+                                                        @"                                 /   .'*--+g+--*'.   \   ",
+                                                        @"                                :   /     $$$     \   ;  ",
+                                                        @"                                `--'      $$$      `--'  ",
+                                                        @"                                          $$$ [          ",
+                                                        @"                                          $$$            ",
+                                                        @"                                          :$$;           ",
+                                                        @"                                          :$$;           ",
+                                                        @"                                           :$$           ",
+                                                        @"                                           'T$bg+.____  ",
+                                                        @"                                             'T$$$$$  : ",
+                                                        @"                                                 '**--' "
+        };
+
+
         private static String[] Dragon = new String[]{@"       ,===:'.,            `-._              ",
                                                      @"            `:.`---.__         `-._          ",
                                                      @"              `:.     `--.         `.        ",
@@ -18,7 +54,7 @@ namespace TheGame
                                                      @"    j;;    /  ,' ,-//.    ,---.      ,       ",
                                                      @"    \|'   /  ,' /  _  \  /  _  \   ,'/       ",
                                                      @"          \  `'  / \  `'  / \  `.' /         ",
-                                                     @"           `.___,'   `.__,'   `.__,'         ",
+                                                     @"           `.___,'   `.__,'   `.__,'         "
         };
 
         private static String[] Goblin = new String[]{@"             ,      ,           ",
@@ -31,7 +67,7 @@ namespace TheGame
                                                       @"           \ \__/\__/ /			",
                                                       @"         ___\ \|--|/ /___		",
                                                       @"       /`    \      /    `\		",
-                                                      @"      /       '----'       \	",
+                                                      @"      /       '----'       \	"
         };
 
         private static String[] Golem = new String[]{@"           ___                      ",
@@ -48,7 +84,7 @@ namespace TheGame
                                                      @" __/ (_    ,;' .-'    / /  /_'-._   ",
                                                      @"`' - '` ~`  ccc.'   __.','     \j\L\",
                                                      @"                 .='/|\7      	   ",
-                                                     @"     	           ' `			   ",
+                                                     @"     	           ' `			   "
         };
 
         private static String[] Orc = new String[]{@"         _......._               ",
@@ -70,7 +106,7 @@ namespace TheGame
                                                    @"      \       .....     |        ",
                                                    @"       `.  .'      `.  /		  ",
                                                    @"         \           .'          ",
-                                                   @"          `-..___..-`			  ",
+                                                   @"          `-..___..-`			  "
         };
 
         private List<Items> ItemList;
@@ -79,7 +115,7 @@ namespace TheGame
         
         public Enemy(int enemyCount)
         {
-            NameList = new List<string>() { "Goblin", "Orc", "Golem", "Dragon" };
+            NameList = new List<string>() { "WildCat", "Goblin", "Orc", "Golem", "Dragon" };
             Name = NameList[enemyCount];
 
             if (Name == "Goblin")
@@ -129,6 +165,18 @@ namespace TheGame
                 attackRollModifier = 6;
                 Console.WriteLine();
                 Drawer.Draw(Dragon);
+            }
+            else if(Name == "WildCat")
+            {
+                Level = 3;
+                maxHealth = 25;
+                currentHealth = maxHealth;
+                Attack = "1d1";
+                ArmorClass = 8;
+                attackRollModifier = 0;
+                Technique = "Scratch";
+                Console.WriteLine();
+                Drawer.Draw(WildCat);
             }
 
             Console.WriteLine("{0} has appeared. Get ready to fight!", Name);

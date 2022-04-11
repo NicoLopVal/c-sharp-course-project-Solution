@@ -113,8 +113,6 @@ namespace TheGame
                 Attack = "1d4";
                 ArmorClass = 10;
                 attackRollModifier = 0;
-                Console.WriteLine();
-                Drawer.Draw(Human);
             }
             else if (Race == "Dwarf")
             {
@@ -124,8 +122,6 @@ namespace TheGame
                 Attack = "1d4";
                 ArmorClass = 11;
                 attackRollModifier = 0;
-                Console.WriteLine();
-                Drawer.Draw(Dwarf);
             }
             else if (Race == "Elf")
             {
@@ -135,8 +131,6 @@ namespace TheGame
                 Attack = "1d4";
                 ArmorClass = 12;
                 attackRollModifier = 0;
-                Console.WriteLine();
-                Drawer.Draw(Elf);
             }
 
             if (Specialization == "Fighter")
@@ -159,6 +153,16 @@ namespace TheGame
             Console.Clear();
             Console.WriteLine("{0}, the {1} {2}, has arrived to the land of Latam and is ready for the adventure!", Name, Race, Specialization);
             Thread.Sleep(1000);
+            Console.WriteLine();
+            
+            if (Race == "Human")
+                Drawer.Draw(Human);
+            else if (Race == "Elf")
+                Drawer.Draw(Elf);
+            else if (Race == "Dwarf")
+                Drawer.Draw(Dwarf);
+
+            Console.WriteLine();
             Console.WriteLine("\nHero Stats\n" +
                 "Health: {0}\n" +
                 "Attack: {1}\n" +
