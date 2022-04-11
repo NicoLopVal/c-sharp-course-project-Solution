@@ -9,7 +9,7 @@ namespace TheGame
 {
     internal class Store
     {
-        private static String[] Store = new String[]{@"          __-----__				",
+        private static String[] store = new String[]{@"          __-----__				",
                                                       @"     ..;;;--'~~~`--;;;..		",
                                                       @"   /;-~  GAME MARKET  ~-.\		",
                                                       @"  //      ,;;;;;;;;      \\		",
@@ -32,7 +32,7 @@ namespace TheGame
         public static void Open(Hero character)
         {
             var characterRace = character.GetRace();                         //UPDATE THIS TO MATCH THE CLASS USED FOR THE CHARACTER CREATED
-            Drawer.Draw(Store);
+            Drawer.Draw(store);
             Console.WriteLine();
             Console.WriteLine("Hello " + characterRace + ", Why are you here?");       // Check with Juanma to see how to get the Race
             
@@ -169,7 +169,7 @@ namespace TheGame
 
         public static void InitializeStore()
         {
-            var ItemFileDirectory = @"C:\Users\BairesDev NLV\Desktop\Items.txt";
+            var ItemFileDirectory = @"../../../Utils/StoreItems.json";
             //YOU CAN ADD HERE YOUR DIRECTORY WITH THE TEXT FILE TO D OTHE TESTINGS File shared: 
             //https://docs.google.com/spreadsheets/d/1KmO_y81h5r5Cpn8NWafyxcH_BD4gKHIM6P1zYt8pLvc/edit#gid=1877859927
             var lines = File.ReadLines(ItemFileDirectory);

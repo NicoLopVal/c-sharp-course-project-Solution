@@ -34,8 +34,8 @@ namespace TheGame
              Drawer.Draw(Welcome);
             //var myHero = new Hero();              FOR TESTING PURPOSES
             //myHero.AddMoneyToPurse(99999);
-            //Store.InitializeStore();
-            //Store.Open(myHero);
+            Store.InitializeStore();
+            
 
             try
             {
@@ -76,7 +76,7 @@ namespace TheGame
             Hero hero = new Hero();
             hero.InitializeHero();
             bool HeroVictory = true;
-            while (HeroVictory && enemyCount < 5)
+            while (HeroVictory && enemyCount < 4)
             {
                 Console.WriteLine("Where would you like to go?\n" +
                     "1. Enemy Boss Fight\n" +
@@ -132,7 +132,7 @@ namespace TheGame
                 }
                 else if (inputInt == 3)
                 {
-                    //market.Open();
+                    Store.Open(hero);
                 }
             }
         }

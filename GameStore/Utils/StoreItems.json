@@ -1,5 +1,40 @@
-{
-  "exclude": [
-
-  ]
-}
+5,3,Weapon,Sword,Fighter,Knife,1d8
+10,7,Weapon,Sword,Fighter,Short Sword,1d12
+15,10,Weapon,Sword,Fighter,Longsword,2d8
+30,21,Weapon,Sword,Fighter,Great Crystal Sword,3d8
+5,3,Weapon,Bow,Rogue,Short Bow,1d6
+10,7,Weapon,Bow,Rogue,Maple Bow,2d6
+15,10,Weapon,Bow,Rogue,Magic Longbow,3d8
+30,21,Weapon,Bow,Rogue,Crystal Bow,4d8
+5,3,Weapon,Staff,Wizard,Wind Staff,1d6
+10,7,Weapon,Staff,Wizard,Earth Staff,1d8
+15,10,Weapon,Staff,Wizard,Fire Staff,1d12
+30,21,Weapon,Staff,Wizard,Magma Staff,2d12
+5,3,Weapon,Vaculum,Cleric,Poison Vaculum,1d8
+10,7,Weapon,Vaculum,Cleric,Terror Vaculum,1d12
+15,10,Weapon,Vaculum,Cleric,Desperation Vaculum,2d8
+30,21,Weapon,Vaculum,Cleric,Omega Vaculum,3d8
+3,2,Armor,Helmet,All,Leather Helm,1
+7,4,Armor,Helmet,All,Iron Helmet,2
+20,14,Armor,Helmet,Fighter,Barbarian Full Helm,3
+20,14,Armor,Helmet,Rogue,Thor's Helm,3
+20,14,Armor,Helmet,Wizard,Infinity Hat,1
+20,14,Armor,Helmet,Cleric,Crystal Circlet,2
+8,5,Armor,Platebody,All,Leather Clothes,0
+13,9,Armor,Platebody,All,Iron Platebody,1
+25,17,Armor,Platebody,Fighter,Barbarian Platebody,3
+25,17,Armor,Platebody,Rogue,Thor's Platebody,2
+25,17,Armor,Platebody,Wizard,Infinity Robes,2
+25,17,Armor,Platebody,Cleric,Divine Robes,2
+3,2,Armor,Boots,All,Leather shoes,0
+7,4,Armor,Boots,All,Light Plate Boots,0
+20,14,Armor,Boots,Fighter,Barbarian Greaves,1
+20,14,Armor,Boots,Rogue,Loki's Boots,1
+20,14,Armor,Boots,Wizard,Infinity Shoes,0
+20,14,Armor,Boots,Cleric,Divine Shoes,0
+7,4,Armor,Shield,All,Wooden Shield,1
+10,7,Armor,Shield,All,Steel Shield,2
+15,10,Armor,Shield,Fighter,Barbarian Shield,3
+15,10,Armor,Shield,Rogue,Valhala's Front,1
+15,10,Armor,Shield,Wizard,Elemental Shield,0
+15,10,Armor,Shield,Cleric,Enchanted Vortex,0

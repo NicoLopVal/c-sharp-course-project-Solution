@@ -9,6 +9,7 @@
         public string Attack;
         public int ArmorClass;
         public string Technique;
+        public int attackRollModifier;
 
         public void takeDamage(int DamageAmount)
         {
@@ -26,6 +27,11 @@
         public string getAttackRoll()
         {
             return this.Attack;
+        }
+
+        public int getAttackRollModifier()
+        {
+            return this.attackRollModifier;
         }
     }
 }

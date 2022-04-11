@@ -89,6 +89,7 @@ namespace TheGame
                 currentHealth = maxHealth;
                 Attack = "1d4";
                 ArmorClass = 8;
+                attackRollModifier = 0;
                 Technique = "Stone Throw";
                 Console.WriteLine();
                 Drawer.Draw(Goblin);
@@ -101,6 +102,7 @@ namespace TheGame
                 Attack = "2d4";
                 ArmorClass = 10;
                 Technique = "Axe Sweep";
+                attackRollModifier = 2;
                 Console.WriteLine();
                 Drawer.Draw(Orc);
             }
@@ -112,6 +114,7 @@ namespace TheGame
                 Attack = "3d4";
                 ArmorClass = 13;
                 Technique = "Totemstorm";
+                attackRollModifier = 4;
                 Console.WriteLine();
                 Drawer.Draw(Golem);
             }
@@ -123,6 +126,7 @@ namespace TheGame
                 Attack = "5d6";
                 ArmorClass = 15;
                 Technique = "Firebreath";
+                attackRollModifier = 6;
                 Console.WriteLine();
                 Drawer.Draw(Dragon);
             }

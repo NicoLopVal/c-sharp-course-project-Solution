@@ -69,7 +69,6 @@ namespace TheGame
         
         private string Race;
         private string Specialization;
-        private Weapon weapon;
         private int Purse;
         private Helmet? MyHelm;
         private Platebody? MyPlatebody;
@@ -113,6 +112,7 @@ namespace TheGame
                 currentHealth = maxHealth;
                 Attack = "1d4";
                 ArmorClass = 10;
+                attackRollModifier = 0;
                 Console.WriteLine();
                 Drawer.Draw(Human);
             }
@@ -123,6 +123,7 @@ namespace TheGame
                 currentHealth = maxHealth;
                 Attack = "1d4";
                 ArmorClass = 11;
+                attackRollModifier = 0;
                 Console.WriteLine();
                 Drawer.Draw(Dwarf);
             }
@@ -133,6 +134,7 @@ namespace TheGame
                 currentHealth = maxHealth;
                 Attack = "1d4";
                 ArmorClass = 12;
+                attackRollModifier = 0;
                 Console.WriteLine();
                 Drawer.Draw(Elf);
             }
@@ -166,7 +168,10 @@ namespace TheGame
 
         public new string getAttackRoll()
         {
-            return weapon.GetWeaponDamageRoll();
+            if (MyWeapon == null)
+                return this.Attack;
+            else
+                return MyWeapon.GetWeaponDamageRoll();
         }
 
         public void restoreHP()
