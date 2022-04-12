@@ -166,7 +166,7 @@ namespace TheGame
             }
             if(activeItems.Count == 0)
             {
-                Console.WriteLine("You don't have nothing to sell right now...");
+                Console.WriteLine("You don't have anything to sell right now...");
                 return;
             }
             else

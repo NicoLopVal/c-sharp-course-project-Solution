@@ -127,8 +127,6 @@ namespace TheGame
                 ArmorClass = 8;
                 attackRollModifier = 0;
                 Technique = "Stone Throw";
-                Console.WriteLine();
-                Drawer.Draw(Goblin);
             }
             else if (Name == "Orc")
             {
@@ -139,8 +137,6 @@ namespace TheGame
                 ArmorClass = 10;
                 Technique = "Axe Sweep";
                 attackRollModifier = 2;
-                Console.WriteLine();
-                Drawer.Draw(Orc);
             }
             else if (Name == "Golem")
             {
@@ -151,8 +147,6 @@ namespace TheGame
                 ArmorClass = 13;
                 Technique = "Totemstorm";
                 attackRollModifier = 4;
-                Console.WriteLine();
-                Drawer.Draw(Golem);
             }
             else if (Name == "Dragon")
             {
@@ -163,8 +157,6 @@ namespace TheGame
                 ArmorClass = 15;
                 Technique = "Firebreath";
                 attackRollModifier = 6;
-                Console.WriteLine();
-                Drawer.Draw(Dragon);
             }
             else if(Name == "WildCat")
             {
@@ -175,12 +167,20 @@ namespace TheGame
                 ArmorClass = 8;
                 attackRollModifier = 0;
                 Technique = "Scratch";
-                Console.WriteLine();
-                Drawer.Draw(WildCat);
             }
-
+            
+            if (Name == "WildCat")
+                Drawer.Draw(WildCat);
+            else if (Name == "Dragon")
+                Drawer.Draw(Dragon);
+            else if (Name == "Golem")
+                Drawer.Draw(Golem);
+            else if (Name == "Orc")
+                Drawer.Draw(Orc);
+            else if (Name == "Goblin")
+                Drawer.Draw(Goblin);
             Console.WriteLine("{0} has appeared. Get ready to fight!", Name);
-            Thread.Sleep(1000);
+            Thread.Sleep(3000);
             Console.WriteLine("\nEnemy Stats\n" +
                 "Health: {0}\n" +
                 "Attack: {1}\n" +
