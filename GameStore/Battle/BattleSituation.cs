@@ -58,18 +58,18 @@ namespace TheGame.Battle
                 {
                     case 1:
                         {
-                            CombatCalculator.CombatCalculator.Attack(hero, enemy, 0, 0);
+                            enemy.takeDamage(CombatCalculator.CombatCalculator.Attack(hero.getAttackRoll(), enemy.getArmorClass(), 0, 0));
                             invalidImput = false;
                         } break;
                     case 2:
                         {
-                            CombatCalculator.CombatCalculator.Attack(hero, enemy, -1, 4);
+                            enemy.takeDamage(CombatCalculator.CombatCalculator.Attack(hero.getAttackRoll(), enemy.getArmorClass(), -1, 4));
                             invalidImput = false;
                         }
                         break;
                     case 3:
                         {
-                            CombatCalculator.CombatCalculator.Attack(hero, enemy, 1, -2);
+                            enemy.takeDamage(CombatCalculator.CombatCalculator.Attack(hero.getAttackRoll(), enemy.getArmorClass(), 1, -2));
                             invalidImput = false;
                         }
                         break;
@@ -80,7 +80,7 @@ namespace TheGame.Battle
                 }
             } while (invalidImput);
             Console.WriteLine("The enemy has dealt you damaged by:");
-            CombatCalculator.CombatCalculator.Attack(enemy, hero, 0, 0);
+            hero.takeDamage(CombatCalculator.CombatCalculator.Attack(enemy.getAttackRoll(), hero.getArmorClass(), 0, 0));
 
             Thread.Sleep(1500);
         }
